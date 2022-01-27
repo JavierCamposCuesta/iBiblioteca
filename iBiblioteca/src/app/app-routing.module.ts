@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { InicioComponent } from './inicio/inicio.component';
+
 
 const routes: Routes = [
   {
@@ -13,10 +13,18 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'inicio',
-    component: InicioComponent,
-    
+    path: 'autor',
+    loadChildren: () => import('./autor/autor.module').then( m => m.AutorPageModule)
   },
+  {
+    path: 'curriculum',
+    loadChildren: () => import('./curriculum/curriculum.module').then( m => m.CurriculumPageModule)
+  },
+  {
+    path: 'biblioteca',
+    loadChildren: () => import('./biblioteca/biblioteca.module').then( m => m.BibliotecaPageModule)
+  },
+  
 ];
 
 @NgModule({

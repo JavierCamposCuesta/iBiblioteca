@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Autor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" class="ion-padding">
+    <button ion-button block (click)="irAtras()" style="border-radius: 3px; padding: 10px; background: rgb(32, 32, 32);">
+      Ir atrás
+    </button>
+
+    <ion-card>
+      
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>Información</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+       Aplicación desarrollada por Javier Campos. A continucación puede consultar más información sobre el autor.
+       
+       <br>
+       <br>
+      <ion-list>
+        <ion-button fill="clear" class="button-clear" href="home" color="dark" href="curriculum">
+         
+            <ion-icon name="book-outline" class="ion-padding-end" style="justify-content: start;"></ion-icon><p style="text-transform: none;">Curriculum vitae</p>
+
+        </ion-button>
+        <br>
+        <ion-button fill="clear" href="mailto:javiercamposcuesta@gmail.com" color="dark" te>
+          <ion-icon name="mail-outline" class="ion-padding-end"></ion-icon><p style="text-transform: none;"><strong>Coreo: </strong>Javier@gmail.com</p>
+        </ion-button>
+        <br>
+        <ion-button fill="clear" href="https://twitter.com/?lang=es" color="dark" te>
+          <ion-icon name="logo-twitter" class="ion-padding-end"></ion-icon>
+            <p style="text-transform: none;"><strong>Twiter: </strong>@Twiter</p>
+        </ion-button>
+        <br>
+        <ion-button fill="clear" href="tel:900900900" color="dark" te>
+          
+          <ion-icon name="call-outline" class="ion-padding-end"></ion-icon><p style="text-transform: none;"><strong>Teléfono: </strong>6667845624</p>
+        </ion-button>
+      </ion-list>
+
+       
+      </ion-card-content>
+    </ion-card>
+    
+  </div>
+</ion-content>

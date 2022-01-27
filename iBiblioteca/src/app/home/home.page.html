@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Inicio
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,37 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div id="container" class="ion-padding">
+    <ion-card>
+      
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>Bienvenido a iBiblioteca!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+       iBiblioteca es una aplicación desarrollada con Ionic que permite gestionar una biblioteca de un centro educativo.
+       <br>
+       Para acceder a la biblioteca pulsa en el siguiente boton.
+       <br>
+       <br>
+
+       <ion-button expand="block" href="biblioteca"><ion-icon name="school-outline" class="ion-padding-end ion-text-center"></ion-icon>Acceso a iBiblioteca</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>Información sobre el autor</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+       Aplicación desarrollada por Javier Campos
+       <br>
+       <br>
+
+       <ion-button expand="block" href="autor"><ion-icon name="person-outline" class="ion-padding-end"></ion-icon>Consultar información</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
   </div>
 </ion-content>

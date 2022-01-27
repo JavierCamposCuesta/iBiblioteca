@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Curriculum
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" class="ion-padding">
+    <button ion-button block (click)="irAtras()" style="border-radius: 3px; padding: 10px; background: rgb(32, 32, 32);margin-bottom: 10px;">
+      Ir atrás
+    </button>
+
+    <ion-list>
+      <ion-item *ngFor="let experiencia of getListaExperiencia()">
+        <div>
+          <h5><strong>{{experiencia.fecha}}</strong></h5>
+          <p>{{experiencia.descripcion}}</p>
+        </div>
+      </ion-item>
+    </ion-list>
+    
+  </div>
+</ion-content>
