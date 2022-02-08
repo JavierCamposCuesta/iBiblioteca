@@ -13,7 +13,7 @@ export class BibliotecaPage implements OnInit {
 
   libros:LibroInterface[]= [];
   constructor(private navCtrl: NavController, private bibliotecaService: BibliotecaService) { }
-
+  
   ngOnInit() {
     this.getLibros();
   }

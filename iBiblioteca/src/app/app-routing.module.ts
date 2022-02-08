@@ -24,11 +24,16 @@ const routes: Routes = [
     path: 'biblioteca',
     loadChildren: () => import('./biblioteca/biblioteca.module').then( m => m.BibliotecaPageModule)
   },
+  {
+    path: 'detalle',
+    loadChildren: () => import('./detalle/detalle.module').then( m => m.DetalleModule)
+  },
   
 ];
 
 @NgModule({
   imports: [
+    // RouterModule.forRoot(routes, 
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]

@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<!-- <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
@@ -39,4 +39,9 @@
     </ion-list>
     
   </div>
+</ion-content> -->
+
+<ion-content>
+  <app-input-busqueda (onEnter)="getLibros()"></app-input-busqueda>
+  <app-tabla [librosTabla]="libros"></app-tabla>
 </ion-content>
