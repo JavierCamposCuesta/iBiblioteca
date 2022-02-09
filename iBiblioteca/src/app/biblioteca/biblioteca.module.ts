@@ -8,8 +8,6 @@ import { BibliotecaPageRoutingModule } from './biblioteca-routing.module';
 
 import { BibliotecaPage } from './biblioteca.page';
 import { HttpClientModule } from '@angular/common/http';
-import { BusquedaComponent } from './busqueda/busqueda.component';
-import { TablaComponent } from './tabla/tabla.component';
 
 import { BibliotecaService } from './biblioteca.service';
 
@@ -21,7 +19,7 @@ import { BibliotecaService } from './biblioteca.service';
     BibliotecaPageRoutingModule,
     HttpClientModule
   ],
-  declarations: [BibliotecaPage, BusquedaComponent, TablaComponent],
+  declarations: [BibliotecaPage],
   providers:[BibliotecaService]
 })
 export class BibliotecaPageModule {}

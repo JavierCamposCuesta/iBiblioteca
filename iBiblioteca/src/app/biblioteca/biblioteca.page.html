@@ -6,7 +6,17 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-content [fullscreen]="true">
+
+<ion-toolbar>
+  <ion-searchbar placeholder="Buscar libros"
+                 animated
+                 debounce="700"
+                 [value]="searchTerm"
+                 (ionChange)="getLibros( $event )"></ion-searchbar>
+</ion-toolbar>
+
+
+<ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
@@ -20,28 +30,21 @@
     </button>
 
 
-    <ion-list>
-      <ion-item *ngFor="let libro of this.libros" style="width: 100%;">
-        <button class="button icon-left button-clear" expand="block" fill="clear" style="width:100%">
-          <ion-item >
-            <ion-thumbnail slot="start">
-              <img src="http://covers.openlibrary.org/b/isbn/{{libro.isbn[2]}}-M.jpg" />
-            </ion-thumbnail>
-            <ion-label>
-              <h3>{{libro.title}}</h3>
-              <p><strong>Autor: </strong>{{libro.author_name}}</p>
-              <p><strong>Año: </strong>{{libro.publish_date}}</p>
-            </ion-label>
-            <ion-icon name="chevron-forward-outline" item-end></ion-icon>
-          </ion-item>
-        </button>
-      </ion-item>
-    </ion-list>
+   
     
+    <ion-list>
+      <ion-item button *ngFor="let libro of this.libros" [routerLink]="['./detalle',libro.isbn[0]]">
+        <ion-thumbnail slot="start">
+          <img src="https://covers.openlibrary.org/b/id/{{libro.isbn[2]}}-M.jpg">
+        </ion-thumbnail>
+        <ion-label>
+        <h5>{{ libro.title }}</h5>
+        <p><b>Autor:</b> {{libro.author_name}}</p>
+        <p><b>Año:</b> {{libro.first_publish_year}}</p>
+        
+      </ion-label>
+      </ion-item>
+  </ion-list>
   </div>
-</ion-content> -->
+</ion-content> 
 
-<ion-content>
-  <app-input-busqueda (onEnter)="getLibros()"></app-input-busqueda>
-  <app-tabla [librosTabla]="libros"></app-tabla>
-</ion-content>

@@ -13,17 +13,16 @@ export class DetalleComponent implements OnInit {
 
   mostrar:boolean = false;
 
-  constructor(private rutaActiva: ActivatedRoute, private bibliotecaService:BibliotecaService) { }
+  constructor(private rutaActiva: ActivatedRoute, private bibliotecaService:BibliotecaService, private route:ActivatedRoute) { }
 
   ngOnInit() {
-   this.getLibro();
-  }
-
-  getLibro(){
-    this.bibliotecaService.getLibros().subscribe(resp=>{
+    const isbn : string = this.route.snapshot.params['isbn'];
+    this.bibliotecaService.getBook(isbn).subscribe(resp=>{
       this.libro = resp.docs[0];
       this.mostrar = true;
     });
   }
+
+  
 
 }

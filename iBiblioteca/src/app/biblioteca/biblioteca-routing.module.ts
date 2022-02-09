@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: BibliotecaPage
+  },
+  {
+    path: 'detalle',
+    loadChildren: () => import('../detalle/detalle.module').then( m => m.DetalleModule)
   }
 ];
 

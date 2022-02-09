@@ -11,15 +11,17 @@ import { LibroInterface } from './libros.interface';
 })
 export class BibliotecaPage implements OnInit {
 
+  searchTerm = '';
+  looking = false;
   libros:LibroInterface[]= [];
   constructor(private navCtrl: NavController, private bibliotecaService: BibliotecaService) { }
   
   ngOnInit() {
-    this.getLibros();
   }
 
-  getLibros(){
-    this.bibliotecaService.getLibros().subscribe(datos =>{
+  getLibros(event){
+    const valor: string = event.detail.value;
+    this.bibliotecaService.getBooks(valor).subscribe(datos =>{
       this.libros = datos.docs;
     })
   }
